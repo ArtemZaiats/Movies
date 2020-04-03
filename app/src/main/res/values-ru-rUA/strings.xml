@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="favourite">Избранное</string>
     <string name="app_name">Movies</string>
     <string name="poster_of_movie">Постер</string>
     <string name="most_popular">Самые популярные</string>

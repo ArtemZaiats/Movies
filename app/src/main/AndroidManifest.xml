@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/clapperboard"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FavouriteActivity"/>
+        <activity
+            android:name=".FavouriteActivity"
+            android:label="@string/favourite"/>
         <activity
             android:name=".DetailActivity"/>
         <activity android:name=".MainActivity">
