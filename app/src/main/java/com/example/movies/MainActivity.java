@@ -22,7 +22,6 @@ import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.movies.adapters.MovieAdapter;
 import com.example.movies.data.MainViewModel;
@@ -202,10 +201,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         loaderManager.destroyLoader(LOADER_ID); 
     }
 
-
-
     @Override
     public void onLoaderReset(@NonNull Loader<JSONObject> loader) {
-
     }
 }

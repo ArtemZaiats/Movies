@@ -1,9 +1,7 @@
 package com.example.movies;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -107,7 +105,7 @@ public class DetailActivity extends AppCompatActivity {
         }
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         movie = viewModel.getMovieById(id);
-        Picasso.get().load(movie.getBigPosterPath()).into(imageViewBigPoster);
+        Picasso.get().load(movie.getBigPosterPath()).placeholder(R.drawable.clapperboard).into(imageViewBigPoster);
         textViewTitle.setText(movie.getTitle());
         textViewOriginalTitle.setText(movie.getOriginalTitle());
         textViewOverview.setText(movie.getOverview());
@@ -118,7 +116,7 @@ public class DetailActivity extends AppCompatActivity {
         recyclerViewReviews = findViewById(R.id.recyclerViewReviews);
         reviewAdapter = new ReviewAdapter();
         trailerAdapter = new TrailerAdapter();
-        trailerAdapter.setOnTrailerCliskListener(new TrailerAdapter.OnTrailerCliskListener() {
+        trailerAdapter.setOnTrailerClickListener(new TrailerAdapter.OnTrailerClickListener() {
             @Override
             public void onTrailerClick(String url) {
                 Intent intentToTrailer = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

@@ -8,9 +8,11 @@
     <string name="item_main">Main page</string>
     <string name="item_favourite">Favourite</string>
     <string name="launch_trailer">Launch_trailer</string>
-    <string name="movie_title">Title: </string>
-    <string name="movie_original_title">Original title: </string>
-    <string name="movie_rating">Rating:</string>
-    <string name="release_date">Release date:</string>
-    <string name="movie_description">Description</string>
+    <string name="movie_title">TITLE</string>
+    <string name="movie_original_title">ORIGINAL TITLE</string>
+    <string name="movie_rating">RATING</string>
+    <string name="release_date">RELEASE DATE</string>
+    <string name="movie_description">DESCRIPTION</string>
+    <string name="reviews">Reviews</string>
+    <string name="trailers">Trailers</string>
 </resources>

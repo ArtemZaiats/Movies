@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerViewHolder> {
 
     private ArrayList<Trailer> trailers;
-    private OnTrailerCliskListener onTrailerCliskListener;
+    private OnTrailerClickListener onTrailerClickListener;
 
     @NonNull
     @Override
@@ -36,7 +36,7 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
         return trailers.size();
     }
 
-    public interface OnTrailerCliskListener {
+    public interface OnTrailerClickListener {
         void onTrailerClick(String url);
     }
 
@@ -50,8 +50,8 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (onTrailerCliskListener != null) {
-                        onTrailerCliskListener.onTrailerClick(trailers.get(getAdapterPosition()).getKey());
+                    if (onTrailerClickListener != null) {
+                        onTrailerClickListener.onTrailerClick(trailers.get(getAdapterPosition()).getKey());
                     }
                 }
             });
@@ -63,7 +63,7 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.TrailerV
         notifyDataSetChanged();
     }
 
-    public void setOnTrailerCliskListener(OnTrailerCliskListener onTrailerCliskListener) {
-        this.onTrailerCliskListener = onTrailerCliskListener;
+    public void setOnTrailerClickListener(OnTrailerClickListener onTrailerClickListener) {
+        this.onTrailerClickListener = onTrailerClickListener;
     }
 }

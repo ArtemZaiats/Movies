@@ -9,9 +9,11 @@
     <string name="item_main">Главная</string>
     <string name="item_favourite">Избранное</string>
     <string name="launch_trailer">Открыть трейлер</string>
-    <string name="movie_title">Название:</string>
-    <string name="movie_original_title">Оригинальное название:</string>
-    <string name="movie_rating">Рейтинг:</string>
-    <string name="release_date">Дата релиза:</string>
-    <string name="movie_description">Описание</string>
+    <string name="movie_title">НАЗВАНИЕ</string>
+    <string name="movie_original_title">ОРИГИНАЛЬНОЕ НАЗВАНИЕ</string>
+    <string name="movie_rating">РЕЙТИНГ</string>
+    <string name="release_date">ДАТА РЕЛИЗА</string>
+    <string name="movie_description">ОПИСАНИЕ</string>
+    <string name="reviews">Отзывы</string>
+    <string name="trailers">Трейлеры</string>
 </resources>
