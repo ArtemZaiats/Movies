@@ -37,7 +37,7 @@ public class NetworkUtils {
     private static final String API_KEY = "8ac3d5aaaa953d5f059a31ff30388197";
     private static final String SORT_BY_POPULARITY = "popularity.desc";
     private static final String SORT_BY_TOP_RATED = "vote_average.desc";
-    private static final String MIN_VOTE_COUNT_VALUE = "1000";
+    private static final String MIN_VOTE_COUNT_VALUE = "3000";
 
     public static final int POPULARITY = 0;
     public static final int TOP_RATED = 1;

@@ -1,6 +1,7 @@
 package com.example.movies;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -85,9 +86,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        /*ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);*/
-
         lang = Locale.getDefault().getLanguage();
         imageViewBigPoster = findViewById(R.id.imageViewBigPoster);
         imageViewAddToFavourite = findViewById(R.id.imageViewAddToFavourite);
@@ -105,6 +103,7 @@ public class DetailActivity extends AppCompatActivity {
         }
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         movie = viewModel.getMovieById(id);
+        getSupportActionBar().setTitle(movie.getTitle());
         Picasso.get().load(movie.getBigPosterPath()).placeholder(R.drawable.clapperboard).into(imageViewBigPoster);
         textViewTitle.setText(movie.getTitle());
         textViewOriginalTitle.setText(movie.getOriginalTitle());
